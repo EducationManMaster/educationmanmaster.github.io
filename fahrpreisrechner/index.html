@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Fahrpreisrechner</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+
+    <div class="header_icon"></div>
+    <div class="header_title">Fahrpreisrechner</div>
+
+  </div>
+
+  <div id="wrapper">
+
+    <div id="preis">1€</div>
+    <div id="startpreis">*Festpreis von 1€</div>
+
+    <div id="menu">
+
+      <div id="optionen">
+
+        <div id="opt1" onclick="option(this.id);" class="option option_aktiv" >Nutzungsdauer</div>
+        <div id="opt2" onclick="option(this.id);" class="option"              >Nutzungsstrecke</div>
+
+      </div>
+
+      <div id="settings">
+
+        <div id="dauer">
+
+          <div class="festpreis">*Preis pro Minute 0,17€</div>
+
+          <div class="setting">
+
+            <div class="setting_title">von: </div>
+            <input id="timeVON" type="time" value="13:00">
+
+          </div>
+
+          <div class="setting">
+
+            <div class="setting_title">bis: </div>
+            <input id="timeBIS" type="time" value="14:00">
+
+          </div>
+
+          <div class="berechnen" onclick="dauerBerechnen();">Berechnen</div>
+
+        </div>
+
+        <div id="strecke">
+
+          <div class="festpreis">*Preis pro Kilometer 0,51€</div>
+
+          <div class="setting_header">Strecke in Kilometer</div>
+          <input id="streckenSlider" class="setting" type="range" min="1" max="35" value="5" oninput="setRange(this.value)">
+          <div id="streckenangabe" class="setting_value">5 km</div>
+
+          <div class="berechnen" onclick="streckeBerechnen();">Berechnen</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
