@@ -8,12 +8,16 @@ var proKilometer = 0.51;
 function option(id) {
 
   document.getElementById(id).className = "option option_aktiv";
+  document.getElementById(id).getElementsByClassName("opt_ico")[0].className = "opt_ico opt_ico_aktiv"
 
   switch (id) {
 
     case "opt1":
 
-      document.getElementById("opt2").className = "option";
+      var opt2 = document.getElementById("opt2");
+
+      opt2.className = "option";
+      opt2.getElementsByClassName("opt_ico")[0].className = "opt_ico"
 
       document.getElementById("dauer").className = "s3";
       document.getElementById("strecke").className = "s1";
@@ -22,7 +26,10 @@ function option(id) {
 
     case "opt2":
 
-      document.getElementById("opt1").className = "option";
+      var opt1 = document.getElementById("opt1");
+
+      opt1.className = "option";
+      opt1.getElementsByClassName("opt_ico")[0].className = "opt_ico"
 
       document.getElementById("dauer").className = "s2";
       document.getElementById("strecke").className = "s0";

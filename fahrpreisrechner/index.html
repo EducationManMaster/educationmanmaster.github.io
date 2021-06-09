@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 
+<!--
+
+Ja, das ist alles per Hand geschrieben.
+Viele Grüße Team 7 (Felix, Lorenz, Florian, Jan)!
+
+
+
+PS: Es gibt ein kleines Easter egg, viel spaß beim Suchen.
+
+-->
+
 <html lang="en" dir="ltr">
 
 <head>
@@ -7,6 +18,7 @@
   <meta charset="utf-8">
 
   <title>Fahrpreisrechner</title>
+  <link rel="shortcut icon" href="data/money.svg">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="mobile-web-app-capable" content="yes">
@@ -37,8 +49,15 @@
 
       <div id="optionen">
 
-        <div id="opt1" onclick="option(this.id);" class="option option_aktiv" >Nutzungsdauer</div>
-        <div id="opt2" onclick="option(this.id);" class="option"              >Nutzungsstrecke</div>
+        <div id="opt1" onclick="option(this.id);" class="option option_aktiv" >
+          <div class="opt_ico opt_ico_aktiv" id="time_ico"></div>
+          <div>Nutzungsdauer</div>
+        </div>
+
+        <div id="opt2" onclick="option(this.id);" class="option">
+            <div class="opt_ico" id="map_ico"></div>
+          <div>Nutzungsstrecke</div>
+        </div>
 
       </div>
 
